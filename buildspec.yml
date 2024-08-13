@@ -1,0 +1,20 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      dotnet: 6.0
+  build:
+    commands:
+      - cd src
+      - dotnet restore
+      - dotnet build -c Release
+      - dotnet publish -c Release -o ../publish
+  post_build:
+    commands:
+      - cd ..
+artifacts:
+  files:
+    - publish/**/*
+    - scripts/**/*
+    - appspec.yml
+  name: mywebapp-$(date +%Y-%m-%d-%H-%M-%S).zip

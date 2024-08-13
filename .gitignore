@@ -1,0 +1,64 @@
+# .gitignore for .NET projects
+# Ignore build output directories
+bin/
+obj/
+
+# Ignore Visual Studio files
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore ReSharper files
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Ignore NuGet packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/[Pp]ackages/*
+# except build/, which is used as an MSBuild target.
+!**/[Pp]ackages/build/
+
+# Ignore Visual Studio Code files
+.vscode/
+
+# Ignore build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Ignore Visual Studio 2019 config folder
+.vs2019/
+
+# Ignore .NET Core build output
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Ignore StyleCop
+StyleCopReport.xml
+
+# Ignore Rider
+.idea/
+
+# Ignore macOS specific files
+.DS_Store
+
+# Ignore publish directory
+publish/
+
+# Ignore appsettings for different environments (except for example)
+appsettings.*.json
+!appsettings.example.json

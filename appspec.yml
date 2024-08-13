@@ -1,0 +1,17 @@
+version: 0.0
+os: windows
+files:
+  - source: /publish
+    destination: C:\inetpub\wwwroot\MyWebApp
+  - source: /scripts
+    destination: C:\inetpub\wwwroot\MyWebApp\scripts
+
+hooks:
+  BeforeInstall:
+    - location: scripts\stop_website.ps1
+      timeout: 30
+      runas: Administrator
+  AfterInstall:
+    - location: scripts\start_website.ps1
+      timeout: 30
+      runas: Administrator
