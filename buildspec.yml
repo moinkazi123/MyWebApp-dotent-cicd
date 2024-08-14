@@ -6,7 +6,6 @@ phases:
   build:
     commands:
       - cd src
-      - dotnet restore
       - dotnet build -c Release
       - dotnet publish -c Release -o ../publish
   post_build:
